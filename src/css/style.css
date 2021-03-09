@@ -29,7 +29,12 @@ header {position: fixed; width: 100%; z-index: 10000; transition: 0.5s;}
 .lab a em {color: #bbb; margin: 10px;}
 
 nav {display: flex; width: 1300px; margin: auto; margin-top: 20px; align-items: center; justify-content: space-between;}
-.logo {}
+
+#logo {}
+.logo{z-index:33; display:block; width:50px; height:50px;}
+.name{display: block; width: 25px; height: 25px; margin: 0 auto;}
+.logo:hover {fill:#3e87f8;}
+
 .gnb {display: flex;}
 .gnb li {}
 .gnb li a {margin: 20px; color: #fff;}
@@ -48,21 +53,28 @@ header.active nav {padding-bottom: 20px;}
 .gototop.active {bottom: 20px; opacity: 1;}
 
 /* INTRO */
-.intro {height: 100vh; background: url(images/intro.jpg) no-repeat center center; background-size: cover; display: flex; text-align: center;}
+.intro {height: 100vh; background: url(../images/seoul_night.jpg) no-repeat center center; background-size: cover; display: flex; text-align: center;}
 .heading {color: #fff; text-align: center;}
 .heading h1 {font-size: 70px; margin-bottom: 40px;}
-.heading p {padding: 0 150px; font-size: 22px; line-height: 1.5em;}
+.heading p {padding: 0 150px; font-size: 22px; font-weight: 400; line-height: 1.5em;}
 
 /* ABOUT */
 .about-content {display: flex; padding: 150px 0;}
 .about-content div {padding: 30px;}
-.desc {flex: 3; text-align: center;}
+.desc {flex: 3; }
 .desc h2 {font-size: 30px; margin-bottom: 30px;}
-.desc p {font-size: 16px; line-height: 1.7em;}
+.desc h3 {display: block; font-size: 23px; line-height: 1.7em;}
+.desc p {display: block; font-size: 16px; line-height: 1.7em;}
+.desc p .bold {font-weight: 400; position: relative;}
+.desc p .bold::before {content: ""; position: absolute; bottom: 0px; width: 0; height: 0.15em; background-color: #f54; transition: all .3s ease; z-index: -1;}
+.desc p:hover .bold::before {width: 100%;}
 .desc a {color: #c25a3a; font-weight: 500;}
 .desc a:hover {text-decoration: underline;}
 .photo {flex: 2;}
-.photo img {width: 500px; border-radius: 70% 70%60% 80%;}
+.photo img {width: 400px; border-radius: 50%;}
+.photo p {justify-content: center;}
+.photo p span {font-size: 25px; font-weight: bold;}
+.introduce {line-height: 5em;}
 
 /* RANKING SECTTION */
 .ranking {background-color: #f8f8f8;}
@@ -72,7 +84,7 @@ header.active nav {padding-bottom: 20px;}
 .item {width: 310px; height: 600px; border-radius: 30px 0 30px 0; background-color: #fff; box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.08); overflow: hidden;}
 
 .up-image {width: 390px; height: 285px;}
-.up-image img {height: 100%;}
+.up-image img {height: 100%; margin: auto;}
 .down-desc {padding: 25px; padding-top: 50px;}
 .down-desc h3 {font-size: 22px; margin: 15px 0;}
 .down-desc p {font-size: 16px;}
@@ -95,22 +107,16 @@ header.active nav {padding-bottom: 20px;}
 .testimonial-content hr {border: none; height: 4px; width: 120px; background-color: #1c45e3; margin: 30px auto;}
 
 .myslider {}
-.myslider div {
-    outline: none;
-}
+.myslider div {outline: none;}
 
 .client {display: flex; justify-content: center; align-items: center;}
 .client img {width: 85px; margin-right: 15px; border-radius: 50%;}
 .client span {display: block; text-align: left; font-size: 18px; line-height: 1.7em;}
 .client span b {display: block;}
 .comment {font-size: 16px; line-height: 1.6em; padding-right: 5px;}
-/* CALL ACTIOM SECTION */
-.callaction {display: flex; height: 450px; position: relative; background: url(images/callaction-01.jpg) no-repeat center center; background-size: cover; justify-content: center; align-items: center;}
-.callaction:before {content: '';  width: 100%;  height: 100%; position: absolute; background: linear-gradient(to right, rgba(160, 8, 160, 0.5), rgba(6, 87, 24, 0.8));}
-.callaction-heading {position: relative; text-align: center;}
-.callaction-heading h2 {color: #fff; font-size: 50px; font-weight: 300; line-height: 1.3em; letter-spacing: -1px; margin-bottom: 50px;}
-.callaction-heading h2 b {font-weight: 500;}
-.callaction-heading a {display: inline-block; padding: 10px 20px; border-radius: 5px; font-size: 18px; background-color: #2ecc71; color: #fff;}
+
+/* SLICK.JS */
+button.slick-arrow {display: none !important;}
 
 /* BLOG SECTION */
 .blog {}
@@ -165,16 +171,3 @@ footer {background-color: #111; padding: 40px 0;}
 .help {flex: 2;}
 .help li {color: #959595;}
 .help li:last-child {margin-top: 30px; color: #fff;}
-
-/* SLICK.JS */
-button.slick-arrow {
-  /* border: 1px solid #000; */
-  display: none !important;
-}
-
-.header__logo{z-index:33;position:absolute;top:0;left:60px;display:block;width:50px;height:50px;background-size:100%}
-
-.header__logo-svg{display:block;width:100%}
-
-.header__logo:hover .header__logo-svg .path,.header__logo:focus .header__logo-svg .path{fill:#3e87f8}
-
