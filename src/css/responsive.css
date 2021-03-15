@@ -1,6 +1,7 @@
 @media (max-width: 768px) {
   /* Header */
   header {}
+  .logo:hover {fill:#000;}
   .banner {
     display: none;
   }
@@ -101,6 +102,9 @@
   .about-content div {
     padding: 10px;
   }
+    
+    .desc p .bold::before {display: none;}
+    .about-content:nth-child(2) .desc {padding-left: 0;}
   
   /* Ranking Section */
   .ranking-content {
@@ -114,6 +118,7 @@
     border-radius: 7px;
     margin-bottom: 25px;
   }
+    .up-image img {width: 150%; height: 110%;}
   
   /* Testimonial Section */
   .testimonial {

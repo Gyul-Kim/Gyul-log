@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@font-face 
 
 * {font-family: 'Montserrat', sans-serif;}
 body {margin: 0; padding: 0; font-size: 15px; font-weight: 300; color: #222;}
@@ -33,6 +34,7 @@ nav {display: flex; width: 1300px; margin: auto; margin-top: 20px; align-items: 
 #logo {}
 .logo{z-index:33; display:block; width:50px; height:50px;}
 .name{display: block; width: 25px; height: 25px; margin: 0 auto;}
+
 .logo:hover {fill:#3e87f8;}
 
 .gnb {display: flex;}
@@ -73,6 +75,14 @@ header.active nav {padding-bottom: 20px;}
 .photo {flex: 2;}
 .photo img {width: 400px; border-radius: 50%;}
 
+.about-content:nth-child(2) .desc {padding-left: 25%;}
+.about-content:nth-child(2) .desc  h3 {font-size: 30px;}
+.about-content:nth-child(2) .desc .feature {margin: 0 50px;}
+.about-content:nth-child(2) .desc .feature ul li strong {position: relative;}
+.about-content:nth-child(2) .desc .feature ul li strong::before {content: ""; position: absolute; display: block; width: 20px; height: 17px; top: 0;  left: -30px; background-image: url(data:image/svg+xml;utf8;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAxOC45IDE2LjciIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZT4uc3Qwe2ZpbGw6bm9uZTtzdHJva2U6IzMzMzMzMztzdHJva2Utd2lkdGg6Mi41O3N0cm9rZS1saW5lY2FwOnJvdW5kfTwvc3R5bGU+PGcgaWQ9Ikdyb3VwXzU0MyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS43NTUgMS43NTgpIj48cGF0aCBpZD0iTGluZV80OCIgY2xhc3M9InN0MCIgZD0iTTEuMyA2LjRsNC41IDUuOCIvPjxwYXRoIGlkPSJMaW5lXzQ5IiBjbGFzcz0ic3QwIiBkPSJNNS44IDEyLjJsOS0xMSIvPjwvZz48L3N2Zz4=); background-size: 100%; background-repeat: no-repeat; background-position: 100% 0%;}
+.about-content:nth-child(2) .photo img {width: 500px; border-radius: 60%;}
+
+/*
 .about-content:nth-child(3) {width: 1300px;}
 .skill-content h3 {font-size: 30px;}
 .skill-content { margin: 0 auto;}
@@ -91,6 +101,7 @@ header.active nav {padding-bottom: 20px;}
 .skill-intro  p span {display: block;}
 .skill-intro  p span:nth-child(1) {}
 .skill-intro  p span:nth-child(2) {}
+*/
 
 
 /* RANKING SECTTION */
@@ -101,7 +112,7 @@ header.active nav {padding-bottom: 20px;}
 .item {width: 310px; height: 600px; border-radius: 30px 0 30px 0; background-color: #fff; box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.08); overflow: hidden;}
 
 .up-image {width: 390px; height: 285px;}
-.up-image img {height: 100%; margin: auto;}
+.up-image img {width: 100%;  height: 100%; margin: 0 auto;}
 .down-desc {padding: 25px; padding-top: 50px;}
 .down-desc h3 {font-size: 22px; margin: 15px 0;}
 .down-desc p {font-size: 16px;}
@@ -138,8 +149,10 @@ header.active nav {padding-bottom: 20px;}
 .client span {display: block; text-align: left; font-size: 18px; line-height: 1.7em;}
 .client span b {display: block;}
 .comment {font-size: 16px; line-height: 1.6em; padding-right: 5px;}
+.myslider>div .btn-explore:hover {font-size: 17px;}
+
 /* CALL ACTIOM SECTION */
-.callaction {display: flex; height: 450px; position: relative; background: url(images/callaction-01.jpg) no-repeat center center; background-size: cover; justify-content: center; align-items: center;}
+.callaction {display: flex; height: 450px; position: relative; background:url(images/IMG_8907.png) no-repeat center center; background-size: cover; justify-content: center; align-items: center;}
 .callaction:before {content: '';  width: 100%;  height: 100%; position: absolute; background: linear-gradient(to right, rgba(160, 8, 160, 0.5), rgba(6, 87, 24, 0.8));}
 .callaction-heading {position: relative; text-align: center;}
 .callaction-heading h2 {color: #fff; font-size: 50px; font-weight: 300; line-height: 1.3em; letter-spacing: -1px; margin-bottom: 50px;}
